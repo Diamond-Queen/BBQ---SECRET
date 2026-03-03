@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
+import '../stylesheets/boston-butt.css';
 
 export default function BostonButt() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function BostonButt() {
       </nav>
 
       {/* Boston Butt Page */}
-      <section className="hero">
+      <section className="hero" id="boston-butt-hero">
         <div className="hero-content">
           <h2>Slow-Cooked Boston Butt</h2>
           <p>Juicy, tender Boston Butt with our special BBQ sauce</p>
@@ -56,6 +57,7 @@ export default function BostonButt() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
+            <img src="../public/images/bostonbutt.jpeg" alt="Boston Butt"/>
             <p><strong>Pricing:</strong> $40 per Boston Butt</p>
             <button className="cta-button">Order Now</button>
           </div>

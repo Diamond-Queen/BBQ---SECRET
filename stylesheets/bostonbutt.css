@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+/* This section will have a background image of the Boston Butt and overlay text. As well as a slight dark overlay to make the text more readable. */
+ #boston-butt-hero {
+  background-image: url('../public/images/boston-butt.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ #boston-butt-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+ }
+
+ #boston-butt-hero .hero-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+
