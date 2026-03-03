@@ -24,7 +24,11 @@ export default function Ribs() {
           </button>
           <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
             <li><Link to="/" onClick={closeNav}>Home</Link></li>
-            <li><a href="#contact" onClick={closeNav}>Contact</a></li>
+            <li><a href="/#about" onClick={closeNav}>About</a></li>
+            <li><Link to="/fried-turkey" onClick={closeNav}>Fried Turkey</Link></li>
+            <li><Link to="/boston-butt" onClick={closeNav}>Boston Butt</Link></li>
+            <li><Link to="/brunswick-stew" onClick={closeNav}>Brunswick Stew</Link></li>
+            <li><a href="/#contact" onClick={closeNav}>Contact</a></li>
           </ul>
           {isNavOpen && <button className="nav-overlay" type="button" aria-label="Close navigation" onClick={closeNav} />}
         </div>

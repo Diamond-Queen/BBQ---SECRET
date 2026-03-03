@@ -30,8 +30,9 @@ function LandingPage() {
           </button>
 
           <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
-            <li><a href="#menu" onClick={closeNav}>Menu</a></li>
+            <li><Link to="/" onClick={closeNav}>Home</Link></li>
             <li><a href="#about" onClick={closeNav}>About</a></li>
+            <li><a href="#menu" onClick={closeNav}>Menu</a></li>
             <li><a href="#contact" onClick={closeNav}>Contact</a></li>
           </ul>
 
