@@ -94,7 +94,7 @@ function LandingPage() {
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p id="contact">📧 robertlaster@yahoo.com | 📞 (229) 894-1085</p>
+          <p id="contact"> robertlaster@yahoo.com | 📞 (229) 894-1085</p>
         </div>
       </footer>
     </div>
