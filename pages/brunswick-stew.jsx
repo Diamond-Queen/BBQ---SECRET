@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
 
 export default function BrunswickStew() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const closeNav = () => setIsNavOpen(false);
+
   return (
     <div className="landing-page page-stew">
       {/* Navigation */}
       <nav className="navbar">
         <div className="container">
           <Link to="/" className="logo"> Big Rob's Rib Shack </Link>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><a href="#contact">Contact</a></li>
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded={isNavOpen}
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            ☰
+          </button>
+          <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
+            <li><Link to="/" onClick={closeNav}>Home</Link></li>
+            <li><a href="#contact" onClick={closeNav}>Contact</a></li>
           </ul>
+          {isNavOpen && <button className="nav-overlay" type="button" aria-label="Close navigation" onClick={closeNav} />}
         </div>
       </nav>
 

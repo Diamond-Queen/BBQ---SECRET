@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '../stylesheets/index.css';
@@ -8,17 +8,34 @@ import Ribs from './ribs';
 import BrunswickStew from './brunswick-stew';
 
 function LandingPage() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const closeNav = () => setIsNavOpen(false);
+
   return (
     <div className="landing-page">
       {/* Navigation */}
       <nav className="navbar">
         <div className="container">
           <h1 className="logo"> Big Rob's Rib Shack </h1>
-          <ul className="nav-links">
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+          <button
+            className="nav-toggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded={isNavOpen}
+            onClick={() => setIsNavOpen((prev) => !prev)}
+          >
+            ☰
+          </button>
+
+          <ul className={`nav-links ${isNavOpen ? 'open' : ''}`}>
+            <li><a href="#menu" onClick={closeNav}>Menu</a></li>
+            <li><a href="#about" onClick={closeNav}>About</a></li>
+            <li><a href="#contact" onClick={closeNav}>Contact</a></li>
           </ul>
+
+          {isNavOpen && <button className="nav-overlay" type="button" aria-label="Close navigation" onClick={closeNav} />}
         </div>
       </nav>
 
