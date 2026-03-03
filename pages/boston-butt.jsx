@@ -10,7 +10,7 @@ export default function BostonButt() {
         <div className="container">
           <Link to="/" className="logo"> Big Rob's Rib Shack </Link>
           <ul className="nav-links">
-            <li><Link to="/pages/index.jsx">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>

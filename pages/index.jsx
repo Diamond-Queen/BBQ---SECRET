@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '../stylesheets/index.css';
 import FriedTurkey from './friedturkey';
 import BostonButt from './boston-butt';
@@ -36,22 +36,22 @@ function LandingPage() {
         <div className="container">
           <h2>Our Specialties</h2>
           <div className="menu-grid">
-            <a href="/fried-turkey" className="menu-item">
+            <Link to="/fried-turkey" className="menu-item">
               <h3>Fried Turkey </h3>
               <p>Tender fried turkey with a crispy golden crust</p>
-            </a>
-            <a href="/ribs" className="menu-item">
+            </Link>
+            <Link to="/ribs" className="menu-item">
               <h3> Slab of Ribs</h3>
               <p>Fall-off-the-bone ribs with our signature dry rub</p>
-            </a>
-            <a href="/boston-butt" className="menu-item">
+            </Link>
+            <Link to="/boston-butt" className="menu-item">
               <h3> Boston Butt</h3>
               <p>Slow-cooked Boston Butt with our special BBQ sauce</p>
-            </a>
-            <a href="/brunswick-stew" className="menu-item">
+            </Link>
+            <Link to="/brunswick-stew" className="menu-item">
               <h3> Brunswick Stew (When Available) </h3>
               <p>Hearty Brunswick Stew with a blend of smoked meats and vegetables</p>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
