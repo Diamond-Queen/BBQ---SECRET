@@ -1,0 +1,578 @@
+/* BBQ Landing Page Styles */
+
+:root {
+  --primary-black: #1a1a1a;
+  --primary-orange: #ff8c00;
+  --accent-red: #e63946;
+  --accent-yellow: #ffd60a;
+  --light-bg: #f5f5f5;
+  --text-light: #ffffff;
+  --text-dark: #1a1a1a;
+  
+  /* Page-specific colors */
+  --boston-butt-dark: #5c3d2e;
+  --boston-butt-light: #d4a574;
+  --ribs-dark: #4a1a1a;
+  --ribs-accent: #cc4444;
+  --turkey-gold: #d4a574;
+  --turkey-light: #f4e4c1;
+  --stew-dark: #3d4c2e;
+  --stew-green: #6b8e23;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+  background-color: var(--primary-black);
+  color: var(--text-light);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-orange);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary-orange);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-black) 0%, #2a2a2a 100%);
+  color: var(--text-light);
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--primary-orange) 0%, transparent 70%);
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-orange);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+/* CTA Button */
+.cta-button {
+  background: linear-gradient(135deg, var(--primary-orange), var(--accent-red));
+  color: white;
+  border: none;
+  padding: 12px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.6);
+}
+
+.cta-button-lg {
+  padding: 16px 50px;
+  font-size: 1.2rem;
+}
+
+/* Menu Section */
+.menu {
+  padding: 80px 20px;
+  background-color: var(--light-bg);
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-black);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid var(--primary-orange);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+}
+
+.menu-item h3 {
+  color: var(--accent-red);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.menu-item p {
+  color: #666;
+}
+
+.menu-item-detail {
+  padding: 3rem;
+  line-height: 1.8;
+}
+
+.menu-item-detail h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.menu-item-detail p {
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.menu-item-detail button {
+  margin-top: 1.5rem;
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary-black) 0%, #2a2a2a 100%);
+  color: var(--text-light);
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-orange);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 2rem;
+}
+
+.feature-icon {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: var(--primary-orange);
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 60px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.feature h3 {
+  color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  color: #ccc;
+}
+
+/* CTA Section */
+.cta {
+  background: linear-gradient(135deg, var(--accent-red) 0%, var(--primary-orange) 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-black);
+  color: var(--text-light);
+  padding: 2rem;
+  text-align: center;
+  border-top: 3px solid var(--primary-orange);
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}
+
+/* PAGE-SPECIFIC STYLES */
+
+/* Boston Butt Page */
+.page-boston-butt .hero {
+  background: linear-gradient(135deg, var(--boston-butt-dark) 0%, #3d2318 100%);
+}
+
+.page-boston-butt .hero h2 {
+  color: var(--boston-butt-light);
+}
+
+.page-boston-butt .navbar {
+  background-color: var(--boston-butt-dark);
+  border-bottom: 3px solid var(--boston-butt-light);
+}
+
+.page-boston-butt .logo {
+  color: var(--boston-butt-light);
+}
+
+.page-boston-butt .nav-links a:hover {
+  color: var(--boston-butt-light);
+}
+
+.page-boston-butt .menu {
+  background-color: #f9f6f0;
+}
+
+.page-boston-butt .menu h2 {
+  color: var(--boston-butt-dark);
+}
+
+.page-boston-butt .cta-button {
+  background: linear-gradient(135deg, var(--boston-butt-light), var(--boston-butt-dark));
+  box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+}
+
+.page-boston-butt .cta-button:hover {
+  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.6);
+}
+
+.page-boston-butt .footer {
+  background-color: var(--boston-butt-dark);
+  border-top-color: var(--boston-butt-light);
+}
+
+.page-boston-butt .menu-item-detail {
+  border-left: 5px solid var(--boston-butt-light);
+  padding: 2rem;
+}
+
+.page-boston-butt .menu-item-detail h3 {
+  color: var(--boston-butt-dark);
+}
+
+/* Ribs Page */
+.page-ribs .hero {
+  background: linear-gradient(135deg, var(--ribs-dark) 0%, #2a0f0f 100%);
+}
+
+.page-ribs .hero h2 {
+  color: var(--ribs-accent);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+.page-ribs .navbar {
+  background: linear-gradient(90deg, var(--ribs-dark) 0%, #3d1a1a 100%);
+  border-bottom: 3px solid var(--ribs-accent);
+}
+
+.page-ribs .logo {
+  color: var(--ribs-accent);
+}
+
+.page-ribs .nav-links a:hover {
+  color: var(--ribs-accent);
+}
+
+.page-ribs .menu {
+  background: linear-gradient(180deg, #1a1a1a 0%, #2a2a2a 100%);
+  color: var(--text-light);
+}
+
+.page-ribs .menu h2 {
+  color: var(--ribs-accent);
+}
+
+.page-ribs .cta-button {
+  background: linear-gradient(135deg, var(--ribs-accent), #8b0000);
+  box-shadow: 0 4px 15px rgba(204, 68, 68, 0.5);
+}
+
+.page-ribs .cta-button:hover {
+  box-shadow: 0 6px 20px rgba(204, 68, 68, 0.7);
+}
+
+.page-ribs .footer {
+  background-color: var(--ribs-dark);
+  border-top-color: var(--ribs-accent);
+}
+
+.page-ribs .menu-item-detail {
+  border-left: 5px solid var(--ribs-accent);
+  background-color: #242424;
+  padding: 2rem;
+  color: #ddd;
+}
+
+.page-ribs .menu-item-detail h3 {
+  color: var(--ribs-accent);
+}
+
+/* Fried Turkey Page */
+.page-turkey .hero {
+  background: linear-gradient(135deg, #d4a574 0%, #c89968 100%);
+}
+
+.page-turkey .hero h2 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(92, 61, 46, 0.3);
+}
+
+.page-turkey .hero p {
+  color: #3d2318;
+}
+
+.page-turkey .navbar {
+  background: linear-gradient(90deg, #a67c52 0%, #c89968 100%);
+  border-bottom: 3px solid #fff;
+}
+
+.page-turkey .logo {
+  color: #fff;
+}
+
+.page-turkey .nav-links a {
+  color: #2a1810;
+  font-weight: 600;
+}
+
+.page-turkey .nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.page-turkey .menu {
+  background-color: var(--turkey-light);
+}
+
+.page-turkey .menu h2 {
+  color: #a67c52;
+}
+
+.page-turkey .cta-button {
+  background: linear-gradient(135deg, #d4a574, #a67c52);
+  box-shadow: 0 4px 15px rgba(212, 165, 116, 0.4);
+}
+
+.page-turkey .cta-button:hover {
+  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.6);
+}
+
+.page-turkey .footer {
+  background-color: #a67c52;
+  color: #fff;
+  border-top-color: #fff;
+}
+
+.page-turkey .menu-item-detail {
+  border-left: 5px solid #a67c52;
+  background-color: #fff;
+  padding: 2rem;
+  color: #2a1810;
+}
+
+.page-turkey .menu-item-detail h3 {
+  color: #a67c52;
+}
+
+/* Brunswick Stew Page */
+.page-stew .hero {
+  background: linear-gradient(135deg, var(--stew-dark) 0%, #2a3620 100%);
+}
+
+.page-stew .hero h2 {
+  color: var(--stew-green);
+}
+
+.page-stew .navbar {
+  background: linear-gradient(90deg, var(--stew-dark) 0%, #4a5c3e 100%);
+  border-bottom: 3px solid var(--stew-green);
+}
+
+.page-stew .logo {
+  color: var(--stew-green);
+}
+
+.page-stew .nav-links a:hover {
+  color: var(--stew-green);
+}
+
+.page-stew .menu {
+  background: linear-gradient(180deg, #e8ede0 0%, #d4dcc8 100%);
+}
+
+.page-stew .menu h2 {
+  color: var(--stew-dark);
+}
+
+.page-stew .cta-button {
+  background: linear-gradient(135deg, var(--stew-green), #5a7a1f);
+  box-shadow: 0 4px 15px rgba(107, 142, 35, 0.4);
+}
+
+.page-stew .cta-button:hover {
+  box-shadow: 0 6px 20px rgba(107, 142, 35, 0.6);
+}
+
+.page-stew .footer {
+  background-color: var(--stew-dark);
+  border-top-color: var(--stew-green);
+}
+
+.page-stew .menu-item-detail {
+  border-left: 5px solid var(--stew-green);
+  background-color: #f5f9ed;
+  padding: 2rem;
+  color: var(--stew-dark);
+}
+
+.page-stew .menu-item-detail h3 {
+  color: var(--stew-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .menu h2,
+  .about h2,
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+}
