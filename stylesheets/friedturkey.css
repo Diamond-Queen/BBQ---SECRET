@@ -38,6 +38,10 @@
     padding: 20px;
 }
 
+h3 {
+  color: #fff;
+}
+
 /* Fried Turkey Image Gallery */
 .fried-turkey-images {
   display: grid;
