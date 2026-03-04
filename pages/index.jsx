@@ -7,6 +7,7 @@ import BostonButt from './boston-butt';
 import Ribs from './ribs';
 import BrunswickStew from './brunswick-stew';
 import ContactForm from './ContactForm';
+import PricingDetails from './PricingDetails';
 
 function LandingPage() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -122,7 +123,7 @@ function LandingPage() {
                 <li>Juicy tender meat</li>
                 <li>Perfect for gatherings</li>
               </ul>
-              <Link to="/fried-turkey" className="cta-button">View Details</Link>
+              <Link to="/pricing/fried-turkey" className="cta-button">View Details</Link>
             </div>
 
             <div className="pricing-card">
@@ -133,7 +134,7 @@ function LandingPage() {
                 <li>Signature dry rub</li>
                 <li>Award-winning recipe</li>
               </ul>
-              <Link to="/ribs" className="cta-button">View Details</Link>
+              <Link to="/pricing/ribs" className="cta-button">View Details</Link>
             </div>
 
             <div className="pricing-card">
@@ -144,7 +145,7 @@ function LandingPage() {
                 <li>Tender & juicy</li>
                 <li>Special BBQ sauce</li>
               </ul>
-              <Link to="/boston-butt" className="cta-button">View Details</Link>
+              <Link to="/pricing/boston-butt" className="cta-button">View Details</Link>
             </div>
 
             <div className="pricing-card">
@@ -155,7 +156,7 @@ function LandingPage() {
                 <li>Smoked meats blend</li>
                 <li>Fresh vegetables</li>
               </ul>
-              <Link to="/brunswick-stew" className="cta-button">View Details</Link>
+              <Link to="/pricing/brunswick-stew" className="cta-button">View Details</Link>
             </div>
           </div>
         </div>
@@ -184,6 +185,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/boston-butt" element={<BostonButt />} />
         <Route path="/ribs" element={<Ribs />} />
         <Route path="/brunswick-stew" element={<BrunswickStew />} />
+        <Route path="/pricing/:itemId" element={<PricingDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>,
