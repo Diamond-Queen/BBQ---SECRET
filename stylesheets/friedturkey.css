@@ -39,7 +39,11 @@
 }
 
 h3 {
-  color: #fff;
+  color: #fff !important;
+}
+
+.menu-item-detail h3 {
+  color: #fff !important;
 }
 
 /* Fried Turkey Image Gallery */
