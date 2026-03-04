@@ -8,6 +8,7 @@ import Ribs from './ribs';
 import BrunswickStew from './brunswick-stew';
 import ContactForm from './ContactForm';
 import PricingDetails from './PricingDetails';
+import OrderPage from './OrderPage';
 
 function LandingPage() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -47,7 +48,7 @@ function LandingPage() {
         <div className="hero-content">
           <h2><em>Smoky.</em> <em> Delicious. </em> <em>Unforgettable.</em></h2>
           <p>Experience the <strong>best</strong> BBQ in town, slow-smoked to perfection</p>
-          <button className="cta-button">Order Now</button>
+          <Link to="/order" className="cta-button">Order Now</Link>
         </div>
       </section>
 
@@ -106,7 +107,7 @@ function LandingPage() {
         <div className="container">
           <h2>Ready to taste the magic?</h2>
           <p>Visit us today or order online for delivery</p>
-          <button className="cta-button cta-button-lg">Place Your Order</button>
+          <Link to="/order" className="cta-button cta-button-lg">Place Your Order</Link>
         </div>
       </section>
 
@@ -169,7 +170,10 @@ function LandingPage() {
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p>🏠 Locally owned and operated | Family recipes since 1995</p>
+          <p>
+            <a href="mailto:robertlaster@yahoo.com" style={{ color: '#d4a574', textDecoration: 'none' }}>robertlaster@yahoo.com</a> | 
+            <a href="tel:+12298941085" style={{ color: '#d4a574', textDecoration: 'none', marginLeft: '0.5rem' }}>📞 (229) 894-1085</a>
+          </p>
         </div>
       </footer>
     </div>
@@ -186,6 +190,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/ribs" element={<Ribs />} />
         <Route path="/brunswick-stew" element={<BrunswickStew />} />
         <Route path="/pricing/:itemId" element={<PricingDetails />} />
+        <Route path="/order" element={<OrderPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,

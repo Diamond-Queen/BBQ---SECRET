@@ -65,10 +65,16 @@ const itemDetails = {
   }
 };
 
+const itemOrder = ['fried-turkey', 'ribs', 'boston-butt', 'brunswick-stew'];
+
 export default function PricingDetails() {
   const { itemId } = useParams();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const item = itemDetails[itemId];
+  const currentIndex = itemOrder.indexOf(itemId);
+  const prevItem = currentIndex > 0 ? itemOrder[currentIndex - 1] : null;
+  const nextItem = currentIndex < itemOrder.length - 1 ? itemOrder[currentIndex + 1] : null;
+  
   const closeNav = () => setIsNavOpen(false);
 
   if (!item) {
@@ -148,7 +154,7 @@ export default function PricingDetails() {
                   </li>
                 ))}
               </ul>
-              <button className="cta-button" style={{ width: '100%', padding: '1rem', fontSize: '1.1rem' }}>Order Now</button>
+              <Link to="/order" className="cta-button" style={{ width: '100%', marginTop: '1.5rem', display: 'block', textAlign: 'center', padding: '1rem' }}>Order Now</Link>
             </div>
 
             {/* Additional Details */}
@@ -208,13 +214,31 @@ export default function PricingDetails() {
             </div>
           </div>
         </div>
+
+        {/* Navigation */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee', maxWidth: '900px', margin: '3rem auto 0' }}>
+          {prevItem ? (
+            <Link to={`/pricing/${prevItem}`} style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>← Previous</Link>
+          ) : (
+            <span style={{ color: '#ccc' }}>← Previous</span>
+          )}
+          <span style={{ color: '#999' }}>{item.name}</span>
+          {nextItem ? (
+            <Link to={`/pricing/${nextItem}`} style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>Next →</Link>
+          ) : (
+            <span style={{ color: '#ccc' }}>Next →</span>
+          )}
+        </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p id="contact">robertlaster@yahoo.com | 📞 (229) 894-1085</p>
+          <p>
+            <a href="mailto:robertlaster@yahoo.com" style={{ color: '#d4a574', textDecoration: 'none' }}>robertlaster@yahoo.com</a> | 
+            <a href="tel:+12298941085" style={{ color: '#d4a574', textDecoration: 'none', marginLeft: '0.5rem' }}>📞 (229) 894-1085</a>
+          </p>
         </div>
       </footer>
     </div>

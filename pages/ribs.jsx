@@ -75,15 +75,22 @@ export default function Ribs() {
               <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(204, 68, 68, 0.2)', borderRadius: '12px', borderTop: '4px solid #cc4444' }}>
                 <h3 style={{ marginTop: 0, textAlign: 'center', color: '#4a1a1a' }}>Ribs Special</h3>
                 <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#cc4444' }}>$25</span><small>per full rack</small></div>
-                <ul style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Slow-cooked to perfection</li>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Signature dry rub seasoning</li>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Fall-off-the-bone tenderness</li>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Perfect for gatherings</li>
+                <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                  <li style={{ padding: '0.5rem 0' }}>Slow-cooked to perfection</li>
+                  <li style={{ padding: '0.5rem 0' }}>Signature dry rub seasoning</li>
+                  <li style={{ padding: '0.5rem 0' }}>Fall-off-the-bone tenderness</li>
+                  <li style={{ padding: '0.5rem 0' }}>Perfect for gatherings</li>
                 </ul>
               </div>
-              <button className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px' }}>Order Now</button>
+              <Link to="/order" className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px', display: 'inline-block', textAlign: 'center' }}>Order Now</Link>
             </div>
+          </div>
+
+          {/* Navigation */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee' }}>
+            <Link to="/fried-turkey" style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>← Previous</Link>
+            <span style={{ color: '#999' }}>Ribs</span>
+            <Link to="/boston-butt" style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>Next →</Link>
           </div>
         </div>
       </section>
@@ -92,7 +99,10 @@ export default function Ribs() {
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p id="contact"> robertlaster@yahoo.com | 📞 (229) 894-1085</p>
+          <p id="contact"> 
+            <a href="mailto:robertlaster@yahoo.com" style={{ color: '#d4a574', textDecoration: 'none' }}>robertlaster@yahoo.com</a> | 
+            <a href="tel:+12298941085" style={{ color: '#d4a574', textDecoration: 'none', marginLeft: '0.5rem' }}>📞 (229) 894-1085</a>
+          </p>
         </div>
       </footer>
     </div>

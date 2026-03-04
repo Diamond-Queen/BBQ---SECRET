@@ -61,14 +61,21 @@ export default function BrunswickStew() {
               <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(107, 142, 35, 0.2)', borderRadius: '12px', borderTop: '4px solid #6b8e23' }}>
                 <h3 style={{ marginTop: 0, textAlign: 'center', color: '#3d4c2e' }}>Brunswick Stew Special</h3>
                 <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#6b8e23' }}>$15</span><small>per 16oz bowl</small></div>
-                <ul style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Rich & hearty blend</li>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Smoked meats combination</li>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Fresh vegetables</li>
-                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Slow-cooked perfection</li>
+                <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
+                  <li style={{ padding: '0.5rem 0' }}>Rich & hearty blend</li>
+                  <li style={{ padding: '0.5rem 0' }}>Smoked meats combination</li>
+                  <li style={{ padding: '0.5rem 0' }}>Fresh vegetables</li>
+                  <li style={{ padding: '0.5rem 0' }}>Slow-cooked perfection</li>
                 </ul>
               </div>
-              <button className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px' }}>Order Now</button>
+              <Link to="/order" className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px', display: 'inline-block', textAlign: 'center' }}>Order Now</Link>
+            </div>
+
+            {/* Navigation */}
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee' }}>
+              <Link to="/boston-butt" style={{ color: '#6b8e23', textDecoration: 'none', fontWeight: 'bold' }}>← Previous</Link>
+              <span style={{ color: '#999' }}>Brunswick Stew</span>
+              <span style={{ color: '#999' }}>End</span>
             </div>
           </div>
         </div>
@@ -78,7 +85,10 @@ export default function BrunswickStew() {
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p id="contact"> robertlaster@yahoo.com | 📞 (229) 894-1085</p>
+          <p id="contact"> 
+            <a href="mailto:robertlaster@yahoo.com" style={{ color: '#6b8e23', textDecoration: 'none' }}>robertlaster@yahoo.com</a> | 
+            <a href="tel:+12298941085" style={{ color: '#6b8e23', textDecoration: 'none', marginLeft: '0.5rem' }}>📞 (229) 894-1085</a>
+          </p>
         </div>
       </footer>
     </div>
