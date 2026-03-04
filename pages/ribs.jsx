@@ -71,18 +71,19 @@ export default function Ribs() {
               </div>
             </div>
 
-            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
-              <h3>Ribs Special</h3>
-              <div className="price">$25<small>per full rack</small></div>
-              <ul style={{ textAlign: 'left' }}>
-                <li>Slow-cooked to perfection</li>
-                <li>Signature dry rub seasoning</li>
-                <li>Fall-off-the-bone tenderness</li>
-                <li>Perfect for gatherings</li>
-              </ul>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
+              <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(204, 68, 68, 0.2)', borderRadius: '12px', borderTop: '4px solid #cc4444' }}>
+                <h3 style={{ marginTop: 0, textAlign: 'center', color: '#4a1a1a' }}>Ribs Special</h3>
+                <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#cc4444' }}>$25</span><small>per full rack</small></div>
+                <ul style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Slow-cooked to perfection</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Signature dry rub seasoning</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Fall-off-the-bone tenderness</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#cc4444' }}>✓</span> Perfect for gatherings</li>
+                </ul>
+              </div>
+              <button className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px' }}>Order Now</button>
             </div>
-
-            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>

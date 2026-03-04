@@ -116,48 +116,93 @@ export default function PricingDetails() {
       </nav>
 
       {/* Details Section */}
-      <section className="menu" style={{ paddingTop: '2rem' }}>
+      <section className="menu" style={{ paddingTop: '2rem', paddingBottom: '3rem' }}>
         <div className="container">
-          <Link to="/" style={{ color: '#d4a574', textDecoration: 'none', marginBottom: '1rem', display: 'inline-block' }}>
+          <Link to="/" style={{ color: '#d4a574', textDecoration: 'none', marginBottom: '2rem', display: 'inline-block', fontSize: '1.1rem' }}>
             ← Back to Menu
           </Link>
 
-          <div className="menu-item-detail">
-            <h2>{item.name}</h2>
-            <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem' }}>{item.description}</p>
+          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            <h2 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#333' }}>{item.name}</h2>
+            <p style={{ fontSize: '1.2rem', marginBottom: '3rem', color: '#666', lineHeight: '1.6' }}>{item.description}</p>
 
-            {/* Main Pricing Card */}
-            <div className="pricing-card" style={{ maxWidth: '500px', marginBottom: '2rem' }}>
-              <h3>{item.name}</h3>
-              <div className="price">{item.price}<small>{item.unit}</small></div>
-              <ul style={{ textAlign: 'left', marginBottom: '1rem' }}>
+            {/* Main Pricing Card - Centered */}
+            <div className="pricing-card" style={{ 
+              maxWidth: '500px', 
+              marginBottom: '3rem',
+              margin: '0 auto 3rem',
+              padding: '2.5rem',
+              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.15)',
+              borderRadius: '12px',
+              backgroundColor: '#fff'
+            }}>
+              <h3 style={{ marginTop: 0, fontSize: '1.8rem', marginBottom: '1rem' }}>{item.name}</h3>
+              <div className="price" style={{ marginBottom: '1.5rem' }}>
+                <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#d4a574' }}>{item.price}</span>
+                <small style={{ display: 'block', fontSize: '1rem', color: '#999', marginTop: '0.5rem' }}>{item.unit}</small>
+              </div>
+              <ul style={{ textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0 }}>
                 {item.highlights.map((highlight, idx) => (
-                  <li key={idx}>{highlight}</li>
+                  <li key={idx} style={{ padding: '0.5rem 0', color: '#555', borderBottom: '1px solid #eee' }}>
+                    <span style={{ color: '#d4a574', marginRight: '0.5rem' }}>✓</span> {highlight}
+                  </li>
                 ))}
               </ul>
-              <button className="cta-button" style={{ width: '100%' }}>Order Now</button>
+              <button className="cta-button" style={{ width: '100%', padding: '1rem', fontSize: '1.1rem' }}>Order Now</button>
             </div>
 
             {/* Additional Details */}
-            <div style={{ marginTop: '2rem', maxWidth: '600px' }}>
-              <h3>About This Item</h3>
-              <p>{item.details}</p>
+            <div style={{ marginTop: '2rem' }}>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333' }}>About This Item</h3>
+              <p style={{ fontSize: '1.1rem', color: '#666', lineHeight: '1.8', marginBottom: '2rem' }}>{item.details}</p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1.5rem', marginBottom: '2rem' }}>
-                <div style={{ padding: '1rem', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
-                  <h4 style={{ marginTop: 0 }}>Cook Time</h4>
-                  <p>{item.cookTime}</p>
+              <div style={{ 
+                display: 'grid', 
+                gridTemplateColumns: '1fr 1fr', 
+                gap: '1.5rem', 
+                marginTop: '2rem', 
+                marginBottom: '3rem'
+              }}>
+                <div style={{ 
+                  padding: '2rem', 
+                  backgroundColor: '#f9f4f0', 
+                  borderRadius: '12px',
+                  border: '2px solid #d4a574',
+                  textAlign: 'center'
+                }}>
+                  <h4 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#333', fontSize: '1.3rem' }}>⏱ Cook Time</h4>
+                  <p style={{ marginBottom: 0, color: '#d4a574', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.cookTime}</p>
                 </div>
-                <div style={{ padding: '1rem', backgroundColor: '#f5f5f5', borderRadius: '8px' }}>
-                  <h4 style={{ marginTop: 0 }}>Servings</h4>
-                  <p>{item.servings}</p>
+                <div style={{ 
+                  padding: '2rem', 
+                  backgroundColor: '#f9f4f0', 
+                  borderRadius: '12px',
+                  border: '2px solid #d4a574',
+                  textAlign: 'center'
+                }}>
+                  <h4 style={{ marginTop: 0, marginBottom: '0.5rem', color: '#333', fontSize: '1.3rem' }}>👥 Servings</h4>
+                  <p style={{ marginBottom: 0, color: '#d4a574', fontSize: '1.3rem', fontWeight: 'bold' }}>{item.servings}</p>
                 </div>
               </div>
 
-              <h3>Why Choose This?</h3>
-              <ul>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: '#333' }}>Why Choose This?</h3>
+              <ul style={{ 
+                listStyle: 'none', 
+                padding: 0,
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '1rem'
+              }}>
                 {item.highlights.map((highlight, idx) => (
-                  <li key={idx}>{highlight}</li>
+                  <li key={idx} style={{ 
+                    padding: '1rem',
+                    backgroundColor: '#f9f4f0',
+                    borderRadius: '8px',
+                    textAlign: 'center',
+                    color: '#555'
+                  }}>
+                    <span style={{ color: '#d4a574', fontSize: '1.5rem' }}>★</span> {highlight}
+                  </li>
                 ))}
               </ul>
             </div>

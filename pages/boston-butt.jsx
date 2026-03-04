@@ -71,18 +71,19 @@ export default function BostonButt() {
               </div>
             </div>
 
-            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
-              <h3>Boston Butt Special</h3>
-              <div className="price">$40<small>per Boston Butt</small></div>
-              <ul style={{ textAlign: 'left' }}>
-                <li>Slow-cooked to perfection</li>
-                <li>Tender & juicy meat</li>
-                <li>Special BBQ sauce</li>
-                <li>Perfect for large gatherings</li>
-              </ul>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
+              <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(212, 165, 116, 0.2)', borderRadius: '12px', borderTop: '4px solid #d4a574' }}>
+                <h3 style={{ marginTop: 0, textAlign: 'center', color: '#5c3d2e' }}>Boston Butt Special</h3>
+                <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#d4a574' }}>$40</span><small>per Boston Butt</small></div>
+                <ul style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#d4a574' }}>✓</span> Slow-cooked to perfection</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#d4a574' }}>✓</span> Tender & juicy meat</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#d4a574' }}>✓</span> Special BBQ sauce</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#d4a574' }}>✓</span> Perfect for large gatherings</li>
+                </ul>
+              </div>
+              <button className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px' }}>Order Now</button>
             </div>
-
-            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>

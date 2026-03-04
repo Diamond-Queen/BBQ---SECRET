@@ -57,18 +57,19 @@ export default function BrunswickStew() {
               something special.
             </p>
             
-            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
-              <h3>Brunswick Stew Special</h3>
-              <div className="price">$15<small>per 16oz bowl</small></div>
-              <ul style={{ textAlign: 'left' }}>
-                <li>Rich & hearty blend</li>
-                <li>Smoked meats combination</li>
-                <li>Fresh vegetables</li>
-                <li>Slow-cooked perfection</li>
-              </ul>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
+              <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(107, 142, 35, 0.2)', borderRadius: '12px', borderTop: '4px solid #6b8e23' }}>
+                <h3 style={{ marginTop: 0, textAlign: 'center', color: '#3d4c2e' }}>Brunswick Stew Special</h3>
+                <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#6b8e23' }}>$15</span><small>per 16oz bowl</small></div>
+                <ul style={{ textAlign: 'center', listStyle: 'none', padding: 0 }}>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Rich & hearty blend</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Smoked meats combination</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Fresh vegetables</li>
+                  <li style={{ padding: '0.5rem 0', color: '#555' }}><span style={{ color: '#6b8e23' }}>✓</span> Slow-cooked perfection</li>
+                </ul>
+              </div>
+              <button className="cta-button" style={{ marginTop: '1.5rem', minWidth: '200px' }}>Order Now</button>
             </div>
-
-            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>
