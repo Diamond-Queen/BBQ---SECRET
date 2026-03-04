@@ -231,6 +231,7 @@ a {
 }
 
 .menu-item-detail h3 {
+  color: var(--accent-red);
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
 }
