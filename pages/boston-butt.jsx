@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
-import '../stylesheets/boston-butt.css';
+import '../stylesheets/bostonbutt.css';
 
 export default function BostonButt() {
   const [isNavOpen, setIsNavOpen] = useState(false);
