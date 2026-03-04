@@ -495,10 +495,16 @@ a {
   background-color: #fff;
   padding: 2rem;
   color: #2a1810;
+  box-shadow: 0 4px 14px rgba(61, 35, 24, 0.12);
 }
 
 .page-turkey .menu-item-detail h3 {
-  color: #a67c52;
+  color: #7a5433;
+}
+
+.page-turkey .menu-item-detail p,
+.page-turkey .menu-item-detail strong {
+  color: #2a1810;
 }
 
 /* Brunswick Stew Page */
