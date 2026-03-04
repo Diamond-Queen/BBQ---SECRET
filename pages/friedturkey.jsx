@@ -57,11 +57,6 @@ export default function FriedTurkey() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
-            <div className="fried-turkey-images">
-              <img src="/images/DeepFriedTurkey.jpeg" alt="Deep Fried Turkey"/>
-              <img src="/images/deep-fry-turkey.jpg" alt="Golden Fried Turkey"/>
-              <img src="/images/friedturkey.jpeg" alt="Crispy Fried Turkey"/>
-            </div>
             <p><strong>Pricing:</strong> $25 for a whole turkey </p>
             <button className="cta-button">Order Now</button>
           </div>
