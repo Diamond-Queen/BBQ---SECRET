@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
+import '../stylesheets/friedturkey.css';
 
 export default function FriedTurkey() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function FriedTurkey() {
       </nav>
 
       {/* Fried Turkey Page */}
-      <section className="hero">
+      <section className="hero" id="fried-turkey-hero">
         <div className="hero-content">
           <h2>Tender Fried Turkey</h2>
           <p>Crispy golden crust with juicy, tender meat inside</p>
@@ -56,6 +57,11 @@ export default function FriedTurkey() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
+            <div className="fried-turkey-images">
+              <img src="/images/DeepFriedTurkey.jpeg" alt="Deep Fried Turkey"/>
+              <img src="/images/deep-fry-turkey.jpg" alt="Golden Fried Turkey"/>
+              <img src="/images/friedturkey.jpeg" alt="Crispy Fried Turkey"/>
+            </div>
             <p><strong>Pricing:</strong> $25 for a whole turkey </p>
             <button className="cta-button">Order Now</button>
           </div>

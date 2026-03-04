@@ -57,7 +57,11 @@ export default function BostonButt() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
-            <img src="../public/images/bostonbutt.jpeg" alt="Boston Butt"/>
+            <div className="boston-butt-images">
+              <img src="/images/bostonbutt.jpeg" alt="Boston Butt"/>
+              <img src="/images/bostonbutt2.jpeg" alt="Boston Butt Close-up"/>
+              <img src="/images/boston-butt.jpeg" alt="Boston Butt Preparation"/>
+            </div>
             <p><strong>Pricing:</strong> $40 per Boston Butt</p>
             <button className="cta-button">Order Now</button>
           </div>

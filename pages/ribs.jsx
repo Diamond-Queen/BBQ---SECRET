@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
+import '../stylesheets/ribs.css';
 
 export default function Ribs() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function Ribs() {
       </nav>
 
       {/* Ribs Page */}
-      <section className="hero">
+      <section className="hero" id="ribs-hero">
         <div className="hero-content">
           <h2>Fall-Off-The-Bone Ribs</h2>
           <p>Succulent ribs with our signature dry rub</p>
@@ -56,6 +57,11 @@ export default function Ribs() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
+            <div className="ribs-images">
+              <img src="/images/ribs.jpg" alt="Delicious Ribs"/>
+              <img src="/images/ribs-sauced.jpg" alt="Ribs with BBQ Sauce"/>
+              <img src="/images/ribs-nice.jpeg" alt="Fresh Ribs"/>
+            </div>
             <p><strong>Pricing:</strong> $25 for a full rack of ribs</p>
             <button className="cta-button">Order Now</button>
           </div>
