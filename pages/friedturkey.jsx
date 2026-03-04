@@ -71,8 +71,8 @@ export default function FriedTurkey() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
-              <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(212, 165, 116, 0.2)', borderRadius: '12px', borderTop: '4px solid #d4a574' }}>
+            <div className="product-offer">
+              <div className="pricing-card product-pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(212, 165, 116, 0.2)', borderRadius: '12px', borderTop: '4px solid #d4a574' }}>
                 <h3 style={{ marginTop: 0, textAlign: 'center', color: '#8b6f47' }}>Fried Turkey Special</h3>
                 <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#d4a574' }}>$25</span><small>per whole turkey</small></div>
                 <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
@@ -87,9 +87,9 @@ export default function FriedTurkey() {
           </div>
 
           {/* Navigation */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee' }}>
+          <div className="page-nav">
             <span style={{ color: '#999' }}>Start</span>
-            <span style={{ color: '#999' }}>Fried Turkey</span>
+            <span className="page-nav-center">Fried Turkey</span>
             <Link to="/ribs" style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>Next →</Link>
           </div>
         </div>

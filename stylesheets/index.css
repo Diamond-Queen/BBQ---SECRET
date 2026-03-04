@@ -84,6 +84,14 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
 }
 
 /* Global animation classes */
@@ -601,6 +609,72 @@ a {
   display: block;
 }
 
+/* Shared responsive layout helpers */
+.order-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.order-sidebar {
+  padding: 2rem;
+  background-color: #f9f4f0;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.product-offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.product-pricing-card {
+  width: 100%;
+}
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+}
+
+.page-nav-center {
+  color: #999;
+  text-align: center;
+  flex: 1;
+}
+
+.detail-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.detail-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.detail-highlights-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 /* PAGE-SPECIFIC STYLES */
 
 /* Boston Butt Page */
@@ -934,6 +1008,30 @@ a {
   .pricing-card {
     margin: 1rem 0;
   }
+
+  .order-layout,
+  .detail-stats-grid,
+  .detail-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-layout {
+    gap: 1.5rem;
+  }
+
+  .order-sidebar {
+    padding: 1.5rem;
+  }
+
+  .page-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .page-nav-center {
+    order: -1;
+    flex: 1 1 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -971,5 +1069,9 @@ a {
   .contact-section h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
+  }
+
+  .order-sidebar {
+    padding: 1.25rem;
   }
 }

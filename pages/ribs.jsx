@@ -71,8 +71,8 @@ export default function Ribs() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
-              <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(204, 68, 68, 0.2)', borderRadius: '12px', borderTop: '4px solid #cc4444' }}>
+            <div className="product-offer">
+              <div className="pricing-card product-pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(204, 68, 68, 0.2)', borderRadius: '12px', borderTop: '4px solid #cc4444' }}>
                 <h3 style={{ marginTop: 0, textAlign: 'center', color: '#4a1a1a' }}>Ribs Special</h3>
                 <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#cc4444' }}>$25</span><small>per full rack</small></div>
                 <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
@@ -87,9 +87,9 @@ export default function Ribs() {
           </div>
 
           {/* Navigation */}
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee' }}>
+          <div className="page-nav">
             <Link to="/fried-turkey" style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>← Previous</Link>
-            <span style={{ color: '#999' }}>Ribs</span>
+            <span className="page-nav-center">Ribs</span>
             <Link to="/boston-butt" style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>Next →</Link>
           </div>
         </div>

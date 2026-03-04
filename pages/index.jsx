@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route, Link } from 'react-router-dom';
 import '../stylesheets/index.css';
 import FriedTurkey from './friedturkey';
 import BostonButt from './boston-butt';
@@ -9,6 +9,8 @@ import BrunswickStew from './brunswick-stew';
 import ContactForm from './ContactForm';
 import PricingDetails from './PricingDetails';
 import OrderPage from './OrderPage';
+
+const Router = window.location.protocol === 'file:' ? HashRouter : BrowserRouter;
 
 function LandingPage() {
   const [isNavOpen, setIsNavOpen] = useState(false);

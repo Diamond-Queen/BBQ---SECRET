@@ -128,7 +128,7 @@ export default function PricingDetails() {
             ← Back to Menu
           </Link>
 
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="detail-shell">
             <h2 style={{ fontSize: '3rem', marginBottom: '1rem', color: '#333' }}>{item.name}</h2>
             <p style={{ fontSize: '1.2rem', marginBottom: '3rem', color: '#666', lineHeight: '1.6' }}>{item.description}</p>
 
@@ -162,13 +162,7 @@ export default function PricingDetails() {
               <h3 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#333' }}>About This Item</h3>
               <p style={{ fontSize: '1.1rem', color: '#666', lineHeight: '1.8', marginBottom: '2rem' }}>{item.details}</p>
 
-              <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: '1fr 1fr', 
-                gap: '1.5rem', 
-                marginTop: '2rem', 
-                marginBottom: '3rem'
-              }}>
+              <div className="detail-stats-grid">
                 <div style={{ 
                   padding: '2rem', 
                   backgroundColor: '#f9f4f0', 
@@ -192,13 +186,7 @@ export default function PricingDetails() {
               </div>
 
               <h3 style={{ fontSize: '2rem', marginBottom: '1.5rem', color: '#333' }}>Why Choose This?</h3>
-              <ul style={{ 
-                listStyle: 'none', 
-                padding: 0,
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '1rem'
-              }}>
+              <ul className="detail-highlights-grid">
                 {item.highlights.map((highlight, idx) => (
                   <li key={idx} style={{ 
                     padding: '1rem',
@@ -216,13 +204,13 @@ export default function PricingDetails() {
         </div>
 
         {/* Navigation */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee', maxWidth: '900px', margin: '3rem auto 0' }}>
+        <div className="page-nav" style={{ maxWidth: '900px', margin: '3rem auto 0' }}>
           {prevItem ? (
             <Link to={`/pricing/${prevItem}`} style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>← Previous</Link>
           ) : (
             <span style={{ color: '#ccc' }}>← Previous</span>
           )}
-          <span style={{ color: '#999' }}>{item.name}</span>
+          <span className="page-nav-center">{item.name}</span>
           {nextItem ? (
             <Link to={`/pricing/${nextItem}`} style={{ color: '#d4a574', textDecoration: 'none', fontWeight: 'bold' }}>Next →</Link>
           ) : (

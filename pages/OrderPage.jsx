@@ -82,7 +82,7 @@ export default function OrderPage() {
         <div className="container">
           <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Order Your Favorite BBQ</h2>
           
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', maxWidth: '1000px', margin: '0 auto', alignItems: 'start' }}>
+          <div className="order-layout">
             {/* Order Form */}
             <div className="contact-form-container">
               {submitted ? (
@@ -199,7 +199,7 @@ export default function OrderPage() {
             </div>
 
             {/* Contact Info & Details */}
-            <div style={{ padding: '2rem', backgroundColor: '#f9f4f0', borderRadius: '10px', height: 'fit-content' }}>
+            <div className="order-sidebar">
               <h3 style={{ marginTop: 0, marginBottom: '1.5rem', color: '#333' }}>Questions?</h3>
               
               <div style={{ marginBottom: '2rem' }}>

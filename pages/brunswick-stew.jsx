@@ -57,8 +57,8 @@ export default function BrunswickStew() {
               something special.
             </p>
             
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '2rem' }}>
-              <div className="pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(107, 142, 35, 0.2)', borderRadius: '12px', borderTop: '4px solid #6b8e23' }}>
+            <div className="product-offer">
+              <div className="pricing-card product-pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(107, 142, 35, 0.2)', borderRadius: '12px', borderTop: '4px solid #6b8e23' }}>
                 <h3 style={{ marginTop: 0, textAlign: 'center', color: '#3d4c2e' }}>Brunswick Stew Special</h3>
                 <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#6b8e23' }}>$15</span><small>per 16oz bowl</small></div>
                 <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
@@ -72,9 +72,9 @@ export default function BrunswickStew() {
             </div>
 
             {/* Navigation */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '3rem', paddingTop: '2rem', borderTop: '2px solid #eee' }}>
+            <div className="page-nav">
               <Link to="/boston-butt" style={{ color: '#6b8e23', textDecoration: 'none', fontWeight: 'bold' }}>← Previous</Link>
-              <span style={{ color: '#999' }}>Brunswick Stew</span>
+              <span className="page-nav-center">Brunswick Stew</span>
               <span style={{ color: '#999' }}>End</span>
             </div>
           </div>
