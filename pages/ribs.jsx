@@ -57,13 +57,32 @@ export default function Ribs() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
-            <div className="ribs-images">
-              <img src="/images/ribs.jpg" alt="Delicious Ribs"/>
-              <img src="/images/ribs-sauced.jpg" alt="Ribs with BBQ Sauce"/>
-              <img src="/images/ribs-nice.jpeg" alt="Fresh Ribs"/>
+            
+            <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Gallery</h3>
+            <div className="image-gallery">
+              <div className="gallery-item">
+                <img src="/images/ribs.jpg" alt="Delicious Ribs"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/ribs-sauced.jpg" alt="Ribs with BBQ Sauce"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/ribs-nice.jpeg" alt="Fresh Ribs"/>
+              </div>
             </div>
-            <p><strong>Pricing:</strong> $25 for a full rack of ribs</p>
-            <button className="cta-button">Order Now</button>
+
+            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
+              <h3>Ribs Special</h3>
+              <div className="price">$25<small>per full rack</small></div>
+              <ul style={{ textAlign: 'left' }}>
+                <li>Slow-cooked to perfection</li>
+                <li>Signature dry rub seasoning</li>
+                <li>Fall-off-the-bone tenderness</li>
+                <li>Perfect for gatherings</li>
+              </ul>
+            </div>
+
+            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>

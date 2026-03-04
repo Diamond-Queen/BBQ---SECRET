@@ -56,8 +56,19 @@ export default function BrunswickStew() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
-            <p><strong>Pricing:</strong> $15 16oz bowl of Brunswick Stew</p>
-            <button className="cta-button">Order Now</button>
+            
+            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
+              <h3>Brunswick Stew Special</h3>
+              <div className="price">$15<small>per 16oz bowl</small></div>
+              <ul style={{ textAlign: 'left' }}>
+                <li>Rich & hearty blend</li>
+                <li>Smoked meats combination</li>
+                <li>Fresh vegetables</li>
+                <li>Slow-cooked perfection</li>
+              </ul>
+            </div>
+
+            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>

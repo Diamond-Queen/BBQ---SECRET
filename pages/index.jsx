@@ -6,6 +6,7 @@ import FriedTurkey from './friedturkey';
 import BostonButt from './boston-butt';
 import Ribs from './ribs';
 import BrunswickStew from './brunswick-stew';
+import ContactForm from './ContactForm';
 
 function LandingPage() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -108,11 +109,66 @@ function LandingPage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="menu">
+        <div className="container">
+          <h2>Our Pricing</h2>
+          <div className="menu-grid">
+            <div className="pricing-card">
+              <h3>Fried Turkey</h3>
+              <div className="price">$25<small>per whole turkey</small></div>
+              <ul>
+                <li>Crispy golden crust</li>
+                <li>Juicy tender meat</li>
+                <li>Perfect for gatherings</li>
+              </ul>
+              <Link to="/fried-turkey" className="cta-button">View Details</Link>
+            </div>
+
+            <div className="pricing-card">
+              <h3>Ribs</h3>
+              <div className="price">$25<small>per full rack</small></div>
+              <ul>
+                <li>Fall-off-the-bone quality</li>
+                <li>Signature dry rub</li>
+                <li>Award-winning recipe</li>
+              </ul>
+              <Link to="/ribs" className="cta-button">View Details</Link>
+            </div>
+
+            <div className="pricing-card">
+              <h3>Boston Butt</h3>
+              <div className="price">$40<small>per Boston Butt</small></div>
+              <ul>
+                <li>Slow-cooked perfection</li>
+                <li>Tender & juicy</li>
+                <li>Special BBQ sauce</li>
+              </ul>
+              <Link to="/boston-butt" className="cta-button">View Details</Link>
+            </div>
+
+            <div className="pricing-card">
+              <h3>Brunswick Stew</h3>
+              <div className="price">$15<small>per 16oz bowl</small></div>
+              <ul>
+                <li>Hearty & satisfying</li>
+                <li>Smoked meats blend</li>
+                <li>Fresh vegetables</li>
+              </ul>
+              <Link to="/brunswick-stew" className="cta-button">View Details</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <ContactForm />
+
       {/* Footer */}
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p id="contact"> robertlaster@yahoo.com | 📞 (229) 894-1085</p>
+          <p>🏠 Locally owned and operated | Family recipes since 1995</p>
         </div>
       </footer>
     </div>

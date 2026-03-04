@@ -57,13 +57,32 @@ export default function FriedTurkey() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
-            <div className="fried-turkey-images">
-              <img src="/images/DeepFriedTurkey.jpeg" alt="Deep Fried Turkey"/>
-              <img src="/images/deep-fry-turkey.jpg" alt="Golden Fried Turkey"/>
-              <img src="/images/friedturkey.jpeg" alt="Crispy Fried Turkey"/>
+            
+            <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Gallery</h3>
+            <div className="image-gallery">
+              <div className="gallery-item">
+                <img src="/images/DeepFriedTurkey.jpeg" alt="Deep Fried Turkey"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/deep-fry-turkey.jpg" alt="Golden Fried Turkey"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/friedturkey.jpeg" alt="Crispy Fried Turkey"/>
+              </div>
             </div>
-            <p><strong>Pricing:</strong> $25 for a whole turkey </p>
-            <button className="cta-button">Order Now</button>
+
+            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
+              <h3>Fried Turkey Special</h3>
+              <div className="price">$25<small>per whole turkey</small></div>
+              <ul style={{ textAlign: 'left' }}>
+                <li>Crispy golden crust</li>
+                <li>Tender juicy meat</li>
+                <li>Signature seasonings</li>
+                <li>Perfect for celebrations</li>
+              </ul>
+            </div>
+
+            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>

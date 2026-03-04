@@ -57,13 +57,32 @@ export default function BostonButt() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
-            <div className="boston-butt-images">
-              <img src="/images/bostonbutt.jpeg" alt="Boston Butt"/>
-              <img src="/images/bostonbutt2.jpeg" alt="Boston Butt Close-up"/>
-              <img src="/images/boston-butt.jpeg" alt="Boston Butt Preparation"/>
+            
+            <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Gallery</h3>
+            <div className="image-gallery">
+              <div className="gallery-item">
+                <img src="/images/bostonbutt.jpeg" alt="Boston Butt"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/bostonbutt2.jpeg" alt="Boston Butt Close-up"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/boston-butt.jpeg" alt="Boston Butt Preparation"/>
+              </div>
             </div>
-            <p><strong>Pricing:</strong> $40 per Boston Butt</p>
-            <button className="cta-button">Order Now</button>
+
+            <div className="pricing-card" style={{ marginTop: '2rem', maxWidth: '400px' }}>
+              <h3>Boston Butt Special</h3>
+              <div className="price">$40<small>per Boston Butt</small></div>
+              <ul style={{ textAlign: 'left' }}>
+                <li>Slow-cooked to perfection</li>
+                <li>Tender & juicy meat</li>
+                <li>Special BBQ sauce</li>
+                <li>Perfect for large gatherings</li>
+              </ul>
+            </div>
+
+            <button className="cta-button" style={{ marginTop: '1.5rem' }}>Order Now</button>
           </div>
         </div>
       </section>
