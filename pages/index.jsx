@@ -124,18 +124,7 @@ function LandingPage() {
         <div className="container">
           <h2>Our Pricing</h2>
           <div className="menu-grid">
-            <div className="pricing-card">
-              <h3>Fried Turkey</h3>
-              <div className="price">$25<small>per whole turkey</small></div>
-              <ul>
-                <li>Crispy golden crust</li>
-                <li>Juicy tender meat</li>
-                <li>Perfect for gatherings</li>
-              </ul>
-              <Link to="/pricing/fried-turkey" className="cta-button">View Details</Link>
-            </div>
-
-            <div className="pricing-card">
+           <div className="pricing-card">
               <h3>Ribs</h3>
               <div className="price">$25<small>per full rack</small></div>
               <ul>
@@ -166,6 +155,16 @@ function LandingPage() {
                 <li>Fresh vegetables</li>
               </ul>
               <Link to="/pricing/brunswick-stew" className="cta-button">View Details</Link>
+            </div>
+            <div className="pricing-card">
+              <h3>Fried Turkey</h3>
+              <div className="price">$25<small>per whole turkey</small></div>
+              <ul>
+                <li>Crispy golden crust</li>
+                <li>Juicy tender meat</li>
+                <li>Perfect for gatherings</li>
+              </ul>
+              <Link to="/pricing/fried-turkey" className="cta-button">View Details</Link>
             </div>
           </div>
         </div>
