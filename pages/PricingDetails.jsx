@@ -148,6 +148,7 @@ export default function PricingDetails() {
               <div className="price" style={{ marginBottom: '1.5rem' }}>
                 <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#d4a574' }}>{item.price}</span>
                 <small style={{ display: 'block', fontSize: '1rem', color: '#999', marginTop: '0.5rem' }}>{item.unit}</small>
+                {item.weight && <small style={{ display: 'block', fontSize: '0.95rem', color: '#d4a574', marginTop: '0.5rem', fontWeight: '600' }}>Max Weight: {item.weight}</small>}
               </div>
               <ul style={{ textAlign: 'left', marginBottom: '2rem', listStyle: 'none', padding: 0 }}>
                 {item.highlights.map((highlight, idx) => (
