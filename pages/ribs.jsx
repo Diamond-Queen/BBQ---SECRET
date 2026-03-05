@@ -64,7 +64,7 @@ export default function Ribs() {
                 <img src="/images/ribs.jpeg" alt="Delicious Ribs"/>
               </div>
               <div className="gallery-item">
-                <img src="/images/ribs-sauced.jpeg" alt="Ribs with BBQ Sauce"/>
+                <img src="/images/ribs-sauced.jpg" alt="Ribs with BBQ Sauce"/>
               </div>
               <div className="gallery-item">
                 <img src="/images/ribs-nice.jpeg" alt="Fresh Ribs"/>
