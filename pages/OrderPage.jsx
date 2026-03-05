@@ -14,6 +14,8 @@ export default function OrderPage() {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const closeNav = () => setIsNavOpen(false);
 
@@ -25,23 +27,51 @@ export default function OrderPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // In a real app, this would send to a backend
-    console.log('Order submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        item: '',
-        quantity: '',
-        date: '',
-        message: ''
+
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          item: formData.item,
+          quantity: formData.quantity,
+          date: formData.date,
+          message: formData.message,
+        }),
       });
-      setSubmitted(false);
-    }, 3000);
+
+      if (!response.ok) {
+        throw new Error('Failed to send order');
+      }
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          item: '',
+          quantity: '',
+          date: '',
+          message: ''
+        });
+        setSubmitted(false);
+      }, 3000);
+    } catch (error) {
+      setErrorMessage('We could not send your order. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -193,10 +223,18 @@ export default function OrderPage() {
                     />
                   </div>
 
-                  <button type="submit" className="form-submit">Place Order</button>
+                  <button type="submit" className="form-submit" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Place Order'}
+                  </button>
                 </form>
               )}
             </div>
+
+            {errorMessage && (
+              <div className="form-error-message" style={{ marginTop: '1rem', color: '#b00020', textAlign: 'center' }}>
+                {errorMessage}
+              </div>
+            )}
 
             {/* Contact Info & Details */}
             <div className="order-sidebar">

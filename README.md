@@ -60,6 +60,28 @@ npm run dev
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 
+## Deployment to Vercel
+
+### Email Configuration
+
+The contact form and order form send emails using Vercel serverless functions. The site owner needs to configure these environment variables in Vercel:
+
+1. Go to your Vercel project → **Settings** → **Environment Variables**
+2. Add the following variables:
+
+```
+EMAIL_USER=robertlaster@yahoo.com
+EMAIL_PASSWORD=your_email_app_password
+EMAIL_RECIPIENT=robertlaster@yahoo.com
+```
+
+**Important:** 
+- For Gmail/Yahoo, use an **App Password**, not your regular password
+- Gmail: Go to Google Account → Security → 2-Step Verification → App Passwords
+- Yahoo: Go to Account Security → Generate app password
+
+The API routes are located in `/api/contact.js` and `/api/order.js` and will automatically work on Vercel.
+
 ## Project Structure
 
 ```

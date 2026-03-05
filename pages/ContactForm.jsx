@@ -9,6 +9,8 @@ export default function ContactForm() {
   });
 
   const [showSuccess, setShowSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,20 +20,42 @@ export default function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Here you would normally send the form data to a backend
-    // For now, we'll just show a success message and reset the form
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setErrorMessage('');
 
-    setShowSuccess(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      });
 
-    // Hide success message after 5 seconds
-    setTimeout(() => {
-      setShowSuccess(false);
-    }, 5000);
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setShowSuccess(true);
+      setFormData({ name: '', email: '', phone: '', message: '' });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setShowSuccess(false);
+      }, 5000);
+    } catch (error) {
+      setErrorMessage('We could not send your message. Please try again or email us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -93,10 +117,16 @@ export default function ContactForm() {
               />
             </div>
 
-            <button type="submit" className="form-submit">
-              Send Message
+            <button type="submit" className="form-submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
+
+          {errorMessage && (
+            <div className="form-error-message" style={{ marginTop: '1rem', color: '#b00020', textAlign: 'center' }}>
+              {errorMessage}
+            </div>
+          )}
 
           <div style={{ marginTop: '2rem', textAlign: 'center', fontSize: '0.9rem', color: '#666' }}>
             <p>Or reach us directly:</p>
