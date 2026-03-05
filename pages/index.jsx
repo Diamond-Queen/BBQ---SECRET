@@ -58,23 +58,24 @@ function LandingPage() {
       <section id="menu" className="menu">
         <div className="container">
           <h2>Our Specialties</h2>
+          <p> Meat provided </p>
           <div className="menu-grid">
-            <Link to="/fried-turkey" className="menu-item">
-              <h3>Fried Turkey </h3>
-              <p>Tender fried turkey with a crispy golden crust</p>
-            </Link>
-            <Link to="/ribs" className="menu-item">
+          <Link to="/ribs" className="menu-item">
               <h3> Slab of Ribs</h3>
               <p>Fall-off-the-bone ribs with our signature dry rub</p>
-            </Link>
-            <Link to="/boston-butt" className="menu-item">
-              <h3> Boston Butt</h3>
+          </Link>
+          <Link to="/boston-butt" className="menu-item">
+             <h3> Boston Butt</h3>
               <p>Slow-cooked Boston Butt with our special BBQ sauce</p>
-            </Link>
-            <Link to="/brunswick-stew" className="menu-item">
+          </Link>
+          <Link to="/brunswick-stew" className="menu-item">
               <h3> Brunswick Stew (When Available) </h3>
               <p>Hearty Brunswick Stew with a blend of smoked meats and vegetables</p>
-            </Link>
+          </Link>
+          <Link to="/fried-turkey" className="menu-item">
+              <h3>Fried Turkey </h3>
+              <p>Tender fried turkey with a crispy golden crust</p>
+         </Link>
           </div>
         </div>
       </section>

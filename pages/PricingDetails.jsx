@@ -22,6 +22,7 @@ const itemDetails = {
     name: 'Fried Turkey',
     price: '$35',
     unit: 'per whole turkey',
+    weight: '14lb max',
     description: 'Tender fried turkey with a crispy golden crust that seals in the juices.',
     highlights: [
       'Crispy golden exterior',
@@ -37,6 +38,7 @@ const itemDetails = {
     name: 'Slow-Cooked Boston Butt',
     price: '$28',
     unit: 'per pound',
+    weight: '10lb max',
     description: 'Slow-cooked Boston Butt with our special BBQ sauce for authentic, melt-in-your-mouth tenderness.',
     highlights: [
       'Hand-pulled to perfection',

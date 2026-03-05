@@ -39,7 +39,8 @@ export default function FriedTurkey() {
       <section className="hero" id="fried-turkey-hero">
         <div className="hero-content">
           <h2>Tender Fried Turkey</h2>
-          <p>Crispy golden crust with juicy, tender meat inside</p>
+          <p>Crispy golden crust with juicy, tender meat inside
+          </p>
         </div>
       </section>
 
@@ -51,7 +52,7 @@ export default function FriedTurkey() {
             <p>
               Our signature fried turkey is a customer favorite! We hand-select the finest turkeys
               and fry them to perfection in our special blend of seasonings. Each bird is seasoned
-              inside and out with our proprietary dry rub, ensuring every bite is bursting with flavor.
+              inside and out with our proprietary dry rub,and injected with a flavorful concoction.
             </p>
             <p>
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving

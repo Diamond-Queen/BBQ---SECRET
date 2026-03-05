@@ -78,7 +78,7 @@ export default function BostonButt() {
                 <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
                   <li style={{ padding: '0.5rem 0' }}>Slow-cooked to perfection</li>
                   <li style={{ padding: '0.5rem 0' }}>Tender & juicy meat</li>
-                  <li style={{ padding: '0.5rem 0' }}>Special BBQ sauce</li>
+                  <li style={{ padding: '0.5rem 0' }}>Special seasioning blend</li>
                   <li style={{ padding: '0.5rem 0' }}>Perfect for large gatherings</li>
                 </ul>
               </div>
