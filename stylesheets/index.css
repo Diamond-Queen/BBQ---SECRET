@@ -759,7 +759,7 @@ a {
   color: var(--text-light);
 }
 
-.page-ribs .menu h2 p {
+.page-ribs .menu h2 {
   color: var(--ribs-accent);
 }
 
@@ -784,7 +784,7 @@ a {
   color: #ddd;
 }
 
-.page-ribs .menu-item-detail h3 {
+.page-ribs .menu-item-detail h3 p {
   color: var(--ribs-accent);
 }
 
