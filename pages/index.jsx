@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, HashRouter, Routes, Route, Link } from 'react-router-dom';
 import '../stylesheets/index.css';
 import '../stylesheets/HomeModule.css';
+import logo from '../public/images/Logo.png';
 import FriedTurkey from './friedturkey';
 import BostonButt from './boston-butt';
 import Ribs from './ribs';
@@ -23,7 +24,10 @@ function LandingPage() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="container">
-          <h1 className="logo"> Big Rob's Rib Shack </h1>
+          <div className="logo">
+            <img src={logo} alt="Logo" />
+            <span>Big Rob's Rib Shack</span>
+          </div>
 
           <button
             className="nav-toggle"

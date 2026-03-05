@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
 import '../stylesheets/ribs.css';
+import logo from '../public/images/Logo.png';
 
 export default function Ribs() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -13,7 +14,10 @@ export default function Ribs() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="container">
-          <Link to="/" className="logo"> Big Rob's Rib Shack </Link>
+          <Link to="/" className="logo">
+            <img src={logo} alt="Logo" />
+            <span>Big Rob's Rib Shack</span>
+          </Link>
           <button
             className="nav-toggle"
             type="button"
