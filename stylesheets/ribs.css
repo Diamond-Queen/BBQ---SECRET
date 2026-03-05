@@ -7,7 +7,7 @@
 /* Hero Section */
 /* This section will have a background image of ribs and overlay text. As well as a slight dark overlay to make the text more readable. */
  #ribs-hero {
-  background-image: url('../public/images/ribs.jpg');
+  background-image: url('../public/images/ribs.jpeg');
   background-size: cover;
   background-position: center;
   position: relative;
