@@ -79,7 +79,7 @@ export default function FriedTurkey() {
             <div className="product-offer">
               <div className="pricing-card product-pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(212, 165, 116, 0.2)', borderRadius: '12px', borderTop: '4px solid #d4a574' }}>
                 <h3 style={{ marginTop: 0, textAlign: 'center', color: '#8b6f47' }}>Fried Turkey Special</h3>
-                <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#d4a574' }}>$25</span><small>per whole turkey</small></div>
+                <div className="price" style={{ textAlign: 'center' }}><span style={{ color: '#d4a574' }}>$25</span><small>per whole turkey</small><small className="weight" style={{ textAlign: 'center' }}>Max Weight: 14lb max</small></div>
                 <ul style={{ textAlign: 'left', listStyle: 'none', padding: 0 }}>
                   <li style={{ padding: '0.5rem 0' }}>Crispy golden crust</li>
                   <li style={{ padding: '0.5rem 0' }}>Tender juicy meat</li>

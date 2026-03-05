@@ -137,7 +137,7 @@ function LandingPage() {
 
             <div className="pricing-card">
               <h3>Boston Butt</h3>
-              <div className="price">$40<small>per Boston Butt</small></div>
+              <div className="price">$40<small>per Boston Butt</small><small className="weight">Max Weight: 10lb max</small></div>
               <ul>
                 <li>Slow-cooked perfection</li>
                 <li>Tender & juicy</li>
@@ -158,7 +158,7 @@ function LandingPage() {
             </div>
             <div className="pricing-card">
               <h3>Fried Turkey</h3>
-              <div className="price">$25<small>per whole turkey</small></div>
+              <div className="price">$25<small>per whole turkey</small><small className="weight">Max Weight: 14lb max</small></div>
               <ul>
                 <li>Crispy golden crust</li>
                 <li>Juicy tender meat</li>

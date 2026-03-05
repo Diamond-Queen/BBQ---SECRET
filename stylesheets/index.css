@@ -451,6 +451,14 @@ a {
   display: block;
 }
 
+.pricing-card .price .weight {
+  font-size: 0.9rem;
+  color: var(--primary-orange);
+  margin-top: 0.5rem;
+  font-weight: 600;
+  display: block;
+}
+
 .pricing-card ul {
   list-style: none;
   margin: 1.5rem 0;
