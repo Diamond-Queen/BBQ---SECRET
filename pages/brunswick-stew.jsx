@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
-import '.../stylesheets/brunswickstew.css';
+import '../stylesheets/brunswickstew.css';
 
 export default function BrunswickStew() {
   const [isNavOpen, setIsNavOpen] = useState(false);
