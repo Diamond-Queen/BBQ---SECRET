@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hero Section */
+/* This section will have a background image of the Brunswick Stew and overlay text. As well as a slight dark overlay to make the text more readable. */
+ #brunswick-stew-hero {
+  background-image: url('../public/images/brunswick-stew.jpeg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+ }
+
+ #brunswick-stew-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6) !important; /* Dark overlay for better text visibility */
+  z-index: 1;
+ }
+
+ #brunswick-stew-hero .hero-content {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+/* Brunswick Stew Image Gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.image-gallery .gallery-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.image-gallery .gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #brunswick-stew-hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  #brunswick-stew-hero .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  #brunswick-stew-hero .hero-content p {
+    font-size: 1rem;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .image-gallery .gallery-item img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  #brunswick-stew-hero {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  #brunswick-stew-hero .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  #brunswick-stew-hero .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .image-gallery .gallery-item img {
+    height: 200px;
+  }
+}
+
+

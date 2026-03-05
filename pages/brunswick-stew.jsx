@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/index.css';
+import '.../stylesheets/brunswickstew.css';
 
 export default function BrunswickStew() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function BrunswickStew() {
       </nav>
 
       {/* Brunswick Stew Page */}
-      <section className="hero">
+      <section className="hero" id="brunswick-stew-hero">
         <div className="hero-content">
           <h2>Hearty Brunswick Stew</h2>
           <p>A rich blend of smoked meats and vegetables, perfect for any occasion</p>
@@ -56,6 +57,19 @@ export default function BrunswickStew() {
               <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
               something special.
             </p>
+
+            <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Gallery</h3>
+            <div className="image-gallery">
+              <div className="gallery-item">
+                <img src="/images/stew.jpeg" alt="Brunswick Stew"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/brunswick.jpeg" alt="Brunswick Stew Close-Up"/>
+              </div>
+              <div className="gallery-item">
+                <img src="/images/brunswick-stew.jpeg" alt="Brunswick Stew Close-Up"/>
+              </div>
+            </div>
             
             <div className="product-offer">
               <div className="pricing-card product-pricing-card" style={{ maxWidth: '450px', padding: '2.5rem', boxShadow: '0 8px 24px rgba(107, 142, 35, 0.2)', borderRadius: '12px', borderTop: '4px solid #6b8e23' }}>
