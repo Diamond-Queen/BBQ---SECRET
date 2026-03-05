@@ -54,9 +54,9 @@ export default function Ribs() {
               inside and out with our proprietary dry rub, ensuring every bite is bursting with flavor.
             </p>
             <p>
-              <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
-              something special.
-            </p>
+          <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
+          something special.
+          </p>
             
             <h3 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Gallery</h3>
             <div className="image-gallery">
