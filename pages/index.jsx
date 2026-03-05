@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, HashRouter, Routes, Route, Link } from 'react-router-dom';
 import '../stylesheets/index.css';
+import '../stylesheets/HomeModule.css';
 import FriedTurkey from './friedturkey';
 import BostonButt from './boston-butt';
 import Ribs from './ribs';
@@ -58,7 +59,7 @@ function LandingPage() {
       <section id="menu" className="menu">
         <div className="container">
           <h2>Our Specialties</h2>
-          <p> <strong>*</strong>  <em>Meat provided</em>  <strong>*</strong> </p>
+          <p> <strong>*</strong> <em>Meat provided</em>  <strong>*</strong> </p>
           <div className="menu-grid">
           <Link to="/ribs" className="menu-item">
               <h3> Slab of Ribs</h3>
