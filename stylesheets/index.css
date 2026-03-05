@@ -784,7 +784,11 @@ a {
   color: #ddd;
 }
 
-.page-ribs .menu-item-detail h3 p {
+.page-ribs .menu-item-detail p {
+  color: var(--ribs-accent);
+}
+
+.page-ribs .menu-item-detail h3 {
   color: var(--ribs-accent);
 }
 
