@@ -43,7 +43,7 @@ export default function BostonButt() {
       <section className="hero" id="boston-butt-hero">
         <div className="hero-content">
           <h2>Slow-Cooked Boston Butt</h2>
-          <p>Juicy, tender Boston Butt with our special BBQ sauce</p>
+          <p>Juicy, tender Boston Butt with our special seasoning blend</p>
         </div>
       </section>
 
@@ -51,7 +51,7 @@ export default function BostonButt() {
         <div className="container">
           <h2>Boston Butt</h2>
           <div className="menu-item-detail">
-            <h3>Juicy, tender Boston Butt with our special BBQ sauce</h3>
+            <h3>Juicy, tender Boston Butt with our special seasoning blend</h3>
             <p>
               Our signature Boston Butt is a customer favorite! We hand-select the finest cuts of meat
               and slow-cook them to perfection in our special blend of seasonings. Each piece is seasoned

@@ -39,14 +39,14 @@ const itemDetails = {
     price: '$28',
     unit: 'per pound',
     weight: '10lb max',
-    description: 'Slow-cooked Boston Butt with our special BBQ sauce for authentic, melt-in-your-mouth tenderness.',
+    description: 'Slow-cooked Boston Butt with our special seasoning blend for authentic, melt-in-your-mouth tenderness.',
     highlights: [
       'Hand-pulled to perfection',
-      'Special BBQ sauce included',
+      'Special seasoning blend included',
       'Smoke-infused flavor',
       'Ideal for sandwiches or platters'
     ],
-    details: 'Smoked low and slow for 16-20 hours, then hand-pulled and tossed with our signature BBQ sauce. Perfect for parties, events, or family dinners.',
+    details: 'Smoked low and slow for 16-20 hours, then hand-pulled and tossed with our special seasoning blend. Perfect for parties, events, or family dinners.',
     cookTime: '16-20 hours',
     servings: '4-5 servings per pound'
   },

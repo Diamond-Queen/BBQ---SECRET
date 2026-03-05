@@ -71,7 +71,7 @@ function LandingPage() {
           </Link>
           <Link to="/boston-butt" className="menu-item">
              <h3> Boston Butt</h3>
-              <p>Slow-cooked Boston Butt with our special BBQ sauce</p>
+              <p>Slow-cooked Boston Butt with our special seasoning blend</p>
           </Link>
           <Link to="/brunswick-stew" className="menu-item">
               <h3> Brunswick Stew (When Available) </h3>
@@ -141,7 +141,7 @@ function LandingPage() {
               <ul>
                 <li>Slow-cooked perfection</li>
                 <li>Tender & juicy</li>
-                <li>Special BBQ sauce</li>
+                <li>Special Seasoning Blend</li>
               </ul>
               <Link to="/pricing/boston-butt" className="cta-button">View Details</Link>
             </div>

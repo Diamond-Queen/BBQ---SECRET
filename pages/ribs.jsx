@@ -55,7 +55,7 @@ export default function Ribs() {
             <p>
               Our signature ribs are a customer favorite! We hand-select the finest cuts of meat
               and slow-cook them to perfection in our special blend of seasonings. Each rack is seasoned
-              inside and out with our proprietary dry rub, ensuring every bite is bursting with flavor.
+              inside and out with our proprietary dry rub, and injected with a flavorful concoction.
             </p>
             <p>
           <strong>Perfect for:</strong> Family gatherings, holidays, or just whenever you're craving
