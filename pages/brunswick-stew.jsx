@@ -103,10 +103,6 @@ export default function BrunswickStew() {
       <footer className="footer">
         <div className="container">
           <p>&copy; 2026 Big Rob's Rib Shack. All rights reserved.</p>
-          <p id="contact"> 
-            <a href="mailto:robertlaster@yahoo.com" style={{ color: '#6b8e23', textDecoration: 'none' }}>robertlaster@yahoo.com</a> | 
-            <a href="tel:+12298941085" style={{ color: '#6b8e23', textDecoration: 'none', marginLeft: '0.5rem' }}>📞 (229) 894-1085</a>
-          </p>
         </div>
       </footer>
     </div>
